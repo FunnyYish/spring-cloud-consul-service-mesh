@@ -1,5 +1,6 @@
 package com.dys.consul.servicemesh;
 
+import java.util.Collections;
 import java.util.Map;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -18,7 +19,7 @@ public class ConsulMeshDiscoveryProperties extends ConsulDiscoveryProperties {
     private boolean sidecar = false;
 
     /** 所依赖的上游微服务标识及端口 */
-    private Map<String, Integer> upstream;
+    private Map<String, Integer> upstream = Collections.emptyMap();
 
     /**
      * @return the sidecar
